@@ -25,7 +25,7 @@ var user = {
     age: 22,
     id: 1
 };
-//typ inference with object literals
+//type inference with object literals
 var person = {
     name: 'lugiu',
     score: 35
@@ -111,9 +111,48 @@ function getRandomColor() {
 var colorOne = getRandomColor();
 var colorTwo = getRandomColor();
 console.log(colorOne, colorTwo);
-var userOne = { name: 'mario', score: 75 };
-function formatUser(user) {
-    console.log("".concat(user.name, " has a score of ").concat(user.score, "."));
+// example 2 - object literal
+// type User = {
+// 	name: string
+// 	score: number
+// }
+// const userOne: User = { name: 'mario', score: 75 }
+// function formatUser(user: User): void {
+// 	console.log(`${user.name} has a score of ${user.score}.`)
+// }
+// formatUser(userOne)
+// formatUser({ name: 'yoshi', score: 100 })
+//union types
+var someId;
+someId = 1;
+someId = '2';
+var email = null;
+email = 'mario@netninja.dev';
+email = null;
+var anotherId;
+// anotherId = undefined
+anotherId = '1';
+anotherId = 2;
+//type guards
+// example 1
+function swapIdType(id) {
+    if (typeof id === 'string') {
+        // can use string methods and properties
+        return parseInt(id);
+    }
+    else {
+        // can use number methods and properties
+        return id.toString();
+    }
 }
-formatUser(userOne);
-formatUser({ name: 'yoshi', score: 100 });
+var idOne = swapIdType(1);
+var idTwo = swapIdType('2');
+console.log(idOne, idTwo);
+function logDetails(value) {
+    if (value.type === 'user') {
+        console.log(value.email, value.username);
+    }
+    if (value.type === 'person') {
+        console.log(value.firstname, value.age);
+    }
+}
