@@ -65,3 +65,26 @@ person.score = 40;
     return `${greeting}, ${name}`;
 }
 const result = formatGreeting('John','Hello');
+
+//any type
+let month:any;
+let title;
+month = 20;
+month = false;
+title = 25;
+title = {
+    hello: 'world',
+}
+
+//any type in arrays
+let things:any[] = ['hello', true, 30, null];
+things.push({id:123});
+
+
+//functions and any
+function addTogether(value:any):any{
+    return value+value;
+}
+
+const resultOne = addTogether('hello');
+const resultTwo = addTogether(20);
