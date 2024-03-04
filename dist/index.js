@@ -15,3 +15,4 @@ let myself = {
 };
 myself.age = 'Lin';
 console.log(myself);
+console.log('hello ninja!!!')
