@@ -70,3 +70,19 @@ function addTogether(value) {
 }
 var resultOne = addTogether('hello');
 var resultTwo = addTogether(20);
+//tuples examples
+var hsla;
+hsla = [100, '100%', '50%', 1];
+var xy;
+xy = [100, 200];
+function useCoords() {
+    //get coords
+    var lat = 100;
+    var lang = 100;
+    return [lat, lang];
+}
+var _a = useCoords(), lat = _a[0], lang = _a[1];
+// named tuples
+var info;
+info = ['peach', 25];
+console.log(info[0]);

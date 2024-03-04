@@ -88,3 +88,22 @@ function addTogether(value:any):any{
 
 const resultOne = addTogether('hello');
 const resultTwo = addTogether(20);
+
+//tuples examples
+let hsla: [number, string, string, number]
+hsla = [100, '100%', '50%',1]
+let xy:[number,number]
+xy = [100, 200]
+
+function useCoords():[number, number] {
+    //get coords
+    const lat = 100
+    const lang = 100
+    return [lat, lang]
+}
+const [lat, lang] = useCoords();
+
+// named tuples
+let info:[name:string, age:number]
+info = ['peach', 25]
+console.log(info[0]);
