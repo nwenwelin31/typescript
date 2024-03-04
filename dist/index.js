@@ -94,7 +94,26 @@ var newPost = {
     create_at: new Date(),
     author: authorOne
 };
+//function argument types
 function createPost(post) {
-    console.log("created post ".concat(post.title, " by ").concat(post.author));
+    console.log("created post ".concat(post.title, " by ").concat(post.author.name));
 }
 createPost(newPost);
+//with arrays
+var posts = [];
+posts.push(newPost);
+function getRandomColor() {
+    var r = Math.floor(Math.random() * 255);
+    var g = Math.floor(Math.random() * 255);
+    var b = Math.floor(Math.random() * 255);
+    return [r, g, b];
+}
+var colorOne = getRandomColor();
+var colorTwo = getRandomColor();
+console.log(colorOne, colorTwo);
+var userOne = { name: 'mario', score: 75 };
+function formatUser(user) {
+    console.log("".concat(user.name, " has a score of ").concat(user.score, "."));
+}
+formatUser(userOne);
+formatUser({ name: 'yoshi', score: 100 });
