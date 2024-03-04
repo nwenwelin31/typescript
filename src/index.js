@@ -2,6 +2,7 @@
 let age = 20;
 let person = 'Nwe Nwe';
 let single = true;
+//arrays
 let fruits = ['banna', 'orange', 'apple'];
 fruits.push('strawberry');
 let ages = [20, 30, 40, 50];
@@ -13,6 +14,10 @@ let myself = {
     age: 20,
     married: false,
 };
-myself.age = 'Lin';
 console.log(myself);
-console.log('hello ninja!!!')
+//type inference with arrays
+let juices = ['apple', 'orange', 'momo'];
+juices.push('peaches');
+console.log(juices);
+const j = juices[3];
+console.log(j);
