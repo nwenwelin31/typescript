@@ -1,5 +1,4 @@
 let age:number = 20;
-let person:string = 'Nwe Nwe';
 let single:boolean = true;
 
 //arrays
@@ -38,4 +37,31 @@ let person = {
 }
 
 person.name = 'browser',
-person.scroe = 40;
+person.score = 40;
+
+//functions
+ function addTwoNumbers(a:number,b:number):number{
+    return a+b;
+ }
+
+ const subtractTwoNumbers = (a:number, b:number):number => {
+    return a-b;
+ }
+
+ addTwoNumbers(3,9);
+ subtractTwoNumbers(5,2);
+
+ function addAllNumbers(items:number[]):number {
+    const total = items.reduce((a,c) => a+c, 0);
+    console.log(total);
+    return total;
+ }
+ addAllNumbers([1,2,3,4,5,6,7,8,9,10]);
+
+
+ //return type inference
+
+ function formatGreeting(name:string, greeting:string):string{
+    return `${greeting}, ${name}`;
+}
+const result = formatGreeting('John','Hello');
