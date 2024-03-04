@@ -107,3 +107,40 @@ const [lat, lang] = useCoords();
 let info:[name:string, age:number]
 info = ['peach', 25]
 console.log(info[0]);
+
+
+//interfaces
+ interface Author {
+    name:string,
+    avatar:string
+ }
+
+ const authorOne: Author = {name: 'John', avatar: '/img/john.jpg'};
+
+ interface Post {
+    title:string,
+    body:string,
+    tags:string[],
+    create_at:Date,
+    author:Author
+ }
+
+ const newPost: Post = {
+    title: 'my first post',
+    body: 'something interesting',
+    tags: ['gaming', 'tech'],
+    create_at: new Date(),
+    author: authorOne
+ }
+
+
+ //function argument types
+ function createPost (post: Post): void {
+    console.log(`created post ${post.title} by ${post.author.name}`);
+ }
+
+ createPost(newPost);
+
+ //with arrays
+ let posts: Post[] = [];
+ posts.push(newPost);

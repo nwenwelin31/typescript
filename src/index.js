@@ -86,3 +86,15 @@ var _a = useCoords(), lat = _a[0], lang = _a[1];
 var info;
 info = ['peach', 25];
 console.log(info[0]);
+var authorOne = { name: 'John', avatar: '/img/john.jpg' };
+var newPost = {
+    title: 'my first post',
+    body: 'something interesting',
+    tags: ['gaming', 'tech'],
+    create_at: new Date(),
+    author: authorOne
+};
+function createPost(post) {
+    console.log("created post ".concat(post.title, " by ").concat(post.author));
+}
+createPost(newPost);
